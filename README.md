@@ -1,90 +1,73 @@
-# Aura Code Challenge
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+</p>
 
-This challenge will allow you demostrate your knowledge and understanding of node.js.
-It is intended to be familar, much like a development story that could come up on the job.
-After you submit the completed project, we will schedule a follow-up code-review.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## The Story
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-**Create a lambda-like handler function that can query zip code data in various ways**
+## Description
 
-- handler function is already bootstrapped in `src/index.js`
-- handler is invoked with events (see below) as would come from API Gateway
-- it is `async` and should return an array or throw an error
-- the dataset to be searched is included in the `src/data.json` file
-- look at the data and decide how best to utilize it
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-### Acceptance Criteria
+## Installation
 
-- design and define zipcode api
-- implement zipcode api handler
-- search by full or partial zipcode
-- search by full or partial city name
-- search by closest latitude/longitude
-- filter by additional attributes
-
-### Sample Zipcode Object
-
-```json
-{
-  "zip": "01230",
-  "type": "STANDARD",
-  "primary_city": "Great Barrington",
-  "acceptable_cities": "Egremont, Gt Barrington, N Egremont, New Marlboro, New Marlborou, New Marlborough, North Egremont, Simons Rock",
-  "unacceptable_cities": "Alford, Berkshire Heights, Hartsville, Risingdale, Van Deusenville",
-  "state": "MA",
-  "county": "Berkshire County",
-  "timezone": "America/New_York",
-  "area_codes": "413",
-  "latitude": "42.19",
-  "longitude": "-73.35",
-  "country": "US",
-  "estimated_population": "5873"
-}
+```bash
+$ npm install
 ```
 
-### Sample Events
+## Running the app
 
-```json
-{
-  "httpMethod": "GET",
-  "path": "/resource",
-  "headers": {},
-  "queryStringParameters": {
-    "date": "2020-11-13"
-  }
-}
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
 ```
 
-```json
-{
-  "httpMethod": "POST",
-  "path": "/resouce",
-  "headers": {
-    "content-type": "application/json"
-  },
-  "body": "{\"title\":\"hello world\"}"
-}
+## Test
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
 ```
 
-## Suggestions
+## Support
 
-- Spend as much or as little time as you wish on this challenge.
-- Many implementation details are up to you, be prepared to explain your decisions.
-- Details matter, but you should strive to provide a complete feature.
-- Use any node packages you want, just remember we want to know what _you_ can do.
-- Consider how you can show how your feature should work, and prove that it does work.
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Getting started
+## Stay in touch
 
-- this bundle contains a git repository
-- work locally, commit changes
-- push to your own git service
-- share the repository link with us
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## Package Scripts
+## License
 
-| command              | description                  |
-| :------------------- | :--------------------------- |
-| `npm run format:fix` | format files with "prettier" |
-| `npm run test`       | execute tests with "jest"    |
+Nest is [MIT licensed](LICENSE).
